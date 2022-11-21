@@ -1,7 +1,7 @@
 # firebase-container-template
 ----
-create boilerplate init, to_dict and from_dict functions<br>
-given a list of variables. <br>
+create boilerplate init, to_dict and from_dict functions given a list of variables. <br>
+the class' text will be returned as a single string, and can be saved to disk by passing a path string via save_dir
 <br>
 ``` python
 from firebase_container import container_class_from_list as ccl

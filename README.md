@@ -19,9 +19,10 @@ This script creates appropriate boilerplate init, to_dict, and from_dict functio
 e.g.:
 
 ``` python
+from firebase_container import container_class_from_list as ccfl
 varlist = "uid username email subscriptions use_history".split()
-cc = container_class_from_list(varlist, class_name="user_class", savedir='/projects/secret')
-print(cc)
+usr_class_txt = cclf(varlist, class_name="user_class", savedir='/projects/secret')
+print(usr_class_txt)
 ```
 
 yeilds the text below, using 4 spaces per indentation level (not tabs) and saves it in '/projects/secret/user_class.py'<br>

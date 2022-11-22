@@ -26,7 +26,7 @@ print(usr_class_txt)
 ```
 
 yeilds the text below, using 4 spaces per indentation level (not tabs) and saves it in '/projects/secret/user_class.py'<br>
-You can then add your own logic and operations. See link above for details about instantiating the object from, and saving the data to, a firebase db object <br>
+You can then add your own logic and operations (e.g. to launch a user interaction, tracking actions in a history, etc.). When the lifecycle of that object ends, store the current object state by exporting its data (**self.to_dict()** ) to a firestore document. You can later pick up where you left off by creating a new class object and populating it with the data stored in the appropriate firebase document. See link above for details about re-instantiating the object from, and saving the data to, a firebase db object <br>
 
 ``` python
 class user_class(object):

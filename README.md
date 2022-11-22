@@ -1,16 +1,23 @@
 # firebase-container-template
+
 ----
 create boilerplate init, to_dict and from_dict functions<br>
 given a list of variables. <br>
 <br>
+e.g.:
+
 ``` python
 from firebase_container import container_class_from_list as ccl
 varlist = "uid firstname lastname email phone".split()
 txt = ccl(varlist, class_name="user_class")
 print(txt)
+```
 
+creates:
+
+``` python
 class user_class(object):
-    def__init__(
+    def __init__(
         self,
         uid,
         firstname,
@@ -38,14 +45,13 @@ class user_class(object):
         return(outdict)
 
     def from_dict(source:dict):
-        new_user_class = {
+        new_user_class = user_class(
             uid=source['uid'],
             firstname=source['firstname'],
             lastname=source['lastname'],
             email=source['email'],
             phone=source['phone'],
-        }
+        )
 
         return(new_user_class)
 ```
-
